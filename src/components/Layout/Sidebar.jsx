@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import LogoutButton from "../LogoutButton";
 
 export default function Sidebar() {
     return (
@@ -16,6 +17,10 @@ export default function Sidebar() {
                         Profile
                     </Link>
                 </nav>
+
+                <div className="px-4 py-6 border-t">
+                    <LogoutButton />
+                </div>
             </div>
         </div>
     );

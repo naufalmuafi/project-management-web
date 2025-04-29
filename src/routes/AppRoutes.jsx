@@ -3,6 +3,7 @@ import Layout from "../components/Layout/Layout.jsx";
 import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
+import ProtectedRoute from "../components/ProtectedRoute.jsx";
 
 export default function AppRoutes() {
     return (
@@ -13,7 +14,14 @@ export default function AppRoutes() {
                 <Route path="/register" element={<Register />} />
 
                 {/* Protected Routes with Layout */}
-                <Route element={<Layout />}>
+                <Route
+                    element={
+                        <ProtectedRoute>
+                            {" "}
+                            <Layout />{" "}
+                        </ProtectedRoute>
+                    }
+                >
                     <Route path="/" element={<Home />} />
                 </Route>
             </Routes>

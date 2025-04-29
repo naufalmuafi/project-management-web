@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import useAuthStore from "../stores/authStore";
 import api from "../utils/api";
 
 export default function Login() {
     const navigate = useNavigate();
+    const { setToken, setUser } = useAuthStore((state) => state);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -11,10 +13,14 @@ export default function Login() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            await api.post("/api/auth/login", {
+            const response = await api.post("/api/auth/login", {
                 email,
                 password,
             });
+            const { accessToken, user } = response.data;
+
+            setToken(accessToken);
+            setUser(user);
             navigate("/");
         } catch (error) {
             console.error(
