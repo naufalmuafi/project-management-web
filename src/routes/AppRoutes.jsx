@@ -4,6 +4,8 @@ import Home from "../pages/Home.jsx";
 import Login from "../pages/Login.jsx";
 import Register from "../pages/Register.jsx";
 import ProtectedRoute from "../components/ProtectedRoute.jsx";
+import Profile from "../pages/Profile.jsx";
+import ProjectDetail from "../pages/ProjectDetail.jsx";
 
 export default function AppRoutes() {
     return (
@@ -23,6 +25,11 @@ export default function AppRoutes() {
                     }
                 >
                     <Route path="/" element={<Home />} />
+                    <Route path="/profile" element={<Profile />} />
+                    <Route
+                        path="/project/:projectId"
+                        element={<ProjectDetail />}
+                    />
                 </Route>
             </Routes>
         </BrowserRouter>

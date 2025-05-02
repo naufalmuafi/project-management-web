@@ -6,19 +6,22 @@ export default function Sidebar() {
         <div className="w-64 bg-white shadow-lg flex flex-col justify-between">
             <div>
                 <div className="p-6 font-bold text-xl borber-b">
-                    ProjectManager
+                    Project Manager
                 </div>
 
                 <nav className="flex flex-col p-4 space-y-2">
                     <Link to="/" className="hover:bg-gray-100 p-2 rounded">
                         Dashboard
                     </Link>
-                    <Link to="/" className="hover:bg-gray-100 p-2 rounded">
+                    <Link
+                        to="/profile"
+                        className="hover:bg-gray-100 p-2 rounded"
+                    >
                         Profile
                     </Link>
                 </nav>
 
-                <div className="px-4 py-6 border-t">
+                <div className="p-4 border-t mt-auto">
                     <LogoutButton />
                 </div>
             </div>
