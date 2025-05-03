@@ -4,7 +4,7 @@ import LogoutButton from "../LogoutButton";
 export default function Sidebar() {
     return (
         <div className="w-64 h-full bg-white shadow-lg flex flex-col justify-between items-start">
-            <div>
+            <div className="w-full">
                 <div className="p-6 font-bold text-xl borber-b">
                     Project Manager
                 </div>
@@ -22,7 +22,7 @@ export default function Sidebar() {
                 </nav>
             </div>
 
-            <div className="p-6 border-t">
+            <div className="w-full p-6 border-t">
                 <LogoutButton />
             </div>
         </div>
