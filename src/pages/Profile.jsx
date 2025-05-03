@@ -22,7 +22,9 @@ export default function Profile() {
     if (!user) {
         return (
             <div className="max-w-2xl mx-auto animate-pulse">
-                <h1 className="text-2xl font-bold mb-6">Profile</h1>
+                <h1 className="text-2xl font-bold mb-6 text-orange-500">
+                    Profile
+                </h1>
 
                 <div className="bg-white rounded-lg shadow p-6 mt-6">
                     <div className="space-y-4">

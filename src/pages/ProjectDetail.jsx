@@ -12,7 +12,7 @@ export default function ProjectDetail() {
         if (projectId) {
             fetchProjectDetail(projectId);
         }
-    }, [projectId, fetchProjectDetail]);
+    }, []);
 
     if (loading)
         return (
